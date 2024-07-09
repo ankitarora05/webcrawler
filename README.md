@@ -1,6 +1,6 @@
 # Web Crawler with PageRank and Search API
 
-This Node.js project is a web crawler that crawls websites, saves their HTML content along with static assets, and builds a graph of the web pages it visits. It includes an API to search through the crawled content using a basic PageRank-inspired algorithm to rank search results.
+This Node.js project is a web crawler that crawls websites, saves their HTML content along with static assets, and builds a graph of the web pages it visits. It includes an API to search the crawled content using a basic PageRank-inspired algorithm to rank search results.
 
 ## Features
 
@@ -25,7 +25,7 @@ This Node.js project is a web crawler that crawls websites, saves their HTML con
 
 1. **Start the server**:
    ```bash
-   node crawlr.js
+   node crawler.js
    ```
 
 2. **crawl a website**:
@@ -49,7 +49,7 @@ This Node.js project is a web crawler that crawls websites, saves their HTML con
 
 ## Project Structure
 
-- `crawlr.js`: Main file containing the crawlr and API logic.
+- `crawler.js`: Main file containing the crawler and API logic.
 - `crawled-sites/`: Directory where the crawled content is saved.
 - `graph.json`: JSON file storing the graph of the crawled web pages and their links.
 
