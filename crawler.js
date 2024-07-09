@@ -9,7 +9,7 @@ const topWebsites = [
     // { "name": "Amazon", "url": "https://www.amazon.com", "type": "E-commerce" },
     // { "name": "Facebook", "url": "https://www.facebook.com", "type": "Social Media" },
     // { "name": "Instagram", "url": "https://www.instagram.com", "type": "Social Media" },
-    // { "name": "Wikipedia", "url": "https://www.wikipedia.org", "type": "Online Encyclopedia" },
+    { "name": "Wikipedia", "url": "https://www.wikipedia.org", "type": "Online Encyclopedia" },
     // { "name": "Netflix", "url": "https://www.netflix.com", "type": "Streaming Service" },
     // { "name": "Twitter", "url": "https://www.twitter.com", "type": "Social Media" },
     // { "name": "LinkedIn", "url": "https://www.linkedin.com", "type": "Professional Networking" },
@@ -113,7 +113,7 @@ const topWebsites = [
     // { "name": "Khan Academy India", "url": "https://www.khanacademy.org", "type": "Education" },
     // { "name": "Duolingo India", "url": "https://www.duolingo.com", "type": "Education" },
     // { "name": "Codecademy India", "url": "https://www.codecademy.com", "type": "Education" }
-    {"name": "Reuters", "url": "https://www.reuters.com/", "type": "News Publishing"}
+    //{"name": "Reuters", "url": "https://www.reuters.com/", "type": "News Publishing"}
 ]
 
 const crawledWebsitesFile = path.join(__dirname, 'crawledWebsites.json');
@@ -145,7 +145,7 @@ async function downloadResource(url, folderPath) {
 }
 
 async function savePageContent(page, url, folderPath, level) {
-    if (visitedUrls.includes(url) || level > 2) return;
+    if (visitedUrls.includes(url) || level > 0) return;
     visitedUrls.push(url);
     fs.writeFileSync(visitedUrlsFile, JSON.stringify(visitedUrls, null, 2));
 
